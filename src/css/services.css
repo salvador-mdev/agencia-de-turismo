@@ -1,0 +1,195 @@
+.services {
+    padding-top: 40px;
+}
+
+.services .titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services .titulo h2 {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--cor-primaria);
+    padding-bottom: 15px;
+}
+
+.services .titulo span:first-child {
+    background-color: var(--cor-primaria);
+    display: block;
+    width: 35px;
+    height: 2px;
+    position: relative;
+    top: -12px;
+    right: 15px;
+    transition: 0.5s ease-in-out;
+}
+
+.services .titulo span:first-child::after {
+    background-color: var(--cor-primaria);
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    top: 7px;
+    right: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.services .titulo span:last-child {
+    background-color: var(--cor-primaria);
+    display: block;
+    width: 35px;
+    height: 2px;
+    position: relative;
+    top: -12px;
+    right: -15px;
+    transition: 0.5s ease-in-out;
+}
+
+.services .titulo span:last-child::after {
+    background-color: var(--cor-primaria);
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    top: 7px;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.services > h3 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    padding-bottom: 24px;
+    color: #2c3e50;
+}
+
+.services .cards {
+    display: grid;
+    grid-template-areas: "card1 card2 card3 card4";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 300px;
+    grid-gap: 20px;
+    padding: 40px 100px;
+}
+
+.services .cards .card1 {
+    grid-area: card1;
+}
+
+.services .cards .card2 {
+    grid-area: card2;
+}
+
+.services .cards .card3 {
+    grid-area: card3;
+}
+
+.services .cards .card4 {
+    grid-area: card4;
+}
+
+.services .cards .card1,
+.services .cards .card2,
+.services .cards .card3,
+.services .cards .card4 {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    padding: 24px;
+    transition: 0.8s ease-in-out;
+}
+
+.services .cards .card1 i,
+.services .cards .card2 i,
+.services .cards .card3 i,
+.services .cards .card4 i {
+    color: var(--cor-primaria);
+    font-size: 50px;
+    padding-bottom: 24px;
+}
+
+.services .cards .card1 h4,
+.services .cards .card2 h4,
+.services .cards .card3 h4,
+.services .cards .card4 h4 {
+    color: #2c3e50;
+    font-size: 20px;
+    font-weight: 800;
+    padding-bottom: 8px;
+}
+
+.services .cards .card1 p,
+.services .cards .card2 p,
+.services .cards .card3 p,
+.services .cards .card4 p {
+    color: #808b8d;
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 16px;
+}
+
+.services .cards .card1:hover,
+.services .cards .card2:hover,
+.services .cards .card3:hover,
+.services .cards .card4:hover {
+    background-color: var(--cor-primaria);
+}
+
+.services .cards .card1:hover i,
+.services .cards .card1:hover h4,
+.services .cards .card1:hover p,
+.services .cards .card2:hover i,
+.services .cards .card2:hover h4,
+.services .cards .card2:hover p,
+.services .cards .card3:hover i,
+.services .cards .card3:hover h4,
+.services .cards .card3:hover p,
+.services .cards .card4:hover i,
+.services .cards .card4:hover h4,
+.services .cards .card4:hover p {
+    color: #fff;
+}
+
+@media (max-width: 950px) {
+    .services .cards {
+        padding: 40px 60px;
+    }
+}
+
+@media (max-width: 850px) {
+    .services .cards {
+        display: grid;
+        grid-template-areas: "card1 card2" "card3 card4";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 260px);
+        grid-gap: 20px;
+        padding: 40px 60px;
+    }
+}
+
+@media (max-width: 550px) {
+    .services .cards {
+        display: grid;
+        grid-template-areas: "card1" "card2" "card3" "card4";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 210px);
+        grid-gap: 20px;
+        padding: 40px 20px;
+    }
+
+    .services > h3 {
+        padding-bottom: 0;
+    }
+
+    .services .cards .card1,
+    .services .cards .card2,
+    .services .cards .card3,
+    .services .cards .card4 {
+        text-align: center;
+    }
+}

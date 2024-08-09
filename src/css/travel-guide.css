@@ -1,0 +1,234 @@
+.travel-guide {
+    padding-top: 40px;
+}
+
+.travel-guide .titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.travel-guide .titulo h2 {
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--cor-primaria);
+    padding-bottom: 15px;
+}
+
+.travel-guide .titulo span:first-child {
+    background-color: var(--cor-primaria);
+    display: block;
+    width: 35px;
+    height: 2px;
+    position: relative;
+    top: -12px;
+    right: 15px;
+    transition: 0.5s ease-in-out;
+}
+
+.travel-guide .titulo span:first-child::after {
+    background-color: var(--cor-primaria);
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    top: 7px;
+    right: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.travel-guide .titulo span:last-child {
+    background-color: var(--cor-primaria);
+    display: block;
+    width: 35px;
+    height: 2px;
+    position: relative;
+    top: -12px;
+    right: -15px;
+    transition: 0.5s ease-in-out;
+}
+
+.travel-guide .titulo span:last-child::after {
+    background-color: var(--cor-primaria);
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    top: 7px;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.travel-guide > h3 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    color: #2c3e50;
+}
+
+.travel-guide .cards {
+    display: grid;
+    grid-template-areas: "card1 card2 card3 card4";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 15px;
+    padding: 40px 100px;
+}
+
+.travel-guide .cards .card1 {
+    grid-area: card1;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.travel-guide .cards .card2{
+    grid-area: card2;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.travel-guide .cards .card3{
+    grid-area: card3;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.travel-guide .cards .card4{
+    grid-area: card4;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.travel-guide .cards .card1 .info,
+.travel-guide .cards .card2 .info,
+.travel-guide .cards .card3 .info,
+.travel-guide .cards .card4 .info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.travel-guide .cards .card1 .overflow .img {
+    background: url(../images/team-1.jpg) no-repeat center top;
+    background-size: cover;
+    max-width: 100%;
+    height: 215px;
+    transition: 0.4s ease-in-out;
+}
+
+.travel-guide .cards .card2 .overflow .img {
+    background: url(../images/team-2.jpg) no-repeat center top;
+    background-size: cover;
+    max-width: 100%;
+    height: 215px;
+    transition: 0.4s ease-in-out;
+}
+
+.travel-guide .cards .card3 .overflow .img {
+    background: url(../images/team-3.jpg) no-repeat center top;
+    background-size: cover;
+    max-width: 100%;
+    height: 215px;
+    transition: 0.4s ease-in-out;
+}
+
+.travel-guide .cards .card4 .overflow .img {
+    background: url(../images/team-4.jpg) no-repeat center top;
+    background-size: cover;
+    max-width: 100%;
+    height: 215px;
+    transition: 0.4s ease-in-out;
+}
+
+.travel-guide .cards .card1 .overflow,
+.travel-guide .cards .card2 .overflow,
+.travel-guide .cards .card3 .overflow,
+.travel-guide .cards .card4 .overflow {
+    overflow: hidden;
+}
+
+.travel-guide .cards .card1:hover .img,
+.travel-guide .cards .card2:hover .img,
+.travel-guide .cards .card3:hover .img,
+.travel-guide .cards .card4:hover .img {
+    transform: scale(1.1);
+}
+
+.travel-guide .cards .info {
+    position: relative;
+}
+
+.travel-guide .cards .info i {
+    font-size: 20px;
+    padding: 8px;
+    background-color: var(--cor-primaria);
+    border-radius: 50%;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.travel-guide .cards .info a:nth-child(1) i {
+    background-color: blue;
+}
+
+.travel-guide .cards .info a:nth-child(2) i {
+    background-color:   #ff354c;
+}
+
+.travel-guide .cards .info a:nth-child(3) i {
+    background-color: rgba(218, 23, 23, 0.925);
+}
+
+.travel-guide .cards .info i:hover {
+    transform: scale(1.1);
+}
+
+.travel-guide .cards .info a:nth-child(2) {
+    padding: 0 20px;
+}
+
+.travel-guide .cards .info .redes {
+    position: absolute;
+    top: -17px;
+}
+
+.travel-guide .cards h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #2c3e50;
+    padding-top: 50px;
+    padding-bottom: 7px;
+}
+
+.travel-guide .cards p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #808b8d;
+    padding-bottom: 40px;
+}
+
+@media (max-width: 1000px) {
+    .travel-guide .cards {
+        display: grid;
+        grid-template-areas: "card1 card2" "card3 card4";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    .travel-guide .cards {
+        grid-gap: 25px;
+        padding: 40px 60px;
+    }
+}
+
+@media (max-width: 550px) {
+    .travel-guide .cards {
+        display: grid;
+        grid-template-areas: "card1" "card2" "card3" "card4";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 20px;
+        padding: 40px 30px;
+    }
+}

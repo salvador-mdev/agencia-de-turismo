@@ -1,0 +1,275 @@
+.destinos {
+    padding-top: 40px;
+}
+
+.destinos .titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.destinos .titulo h2 {
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--cor-primaria);
+    padding-bottom: 15px;
+}
+
+.destinos .titulo span:first-child {
+    background-color: var(--cor-primaria);
+    display: block;
+    width: 35px;
+    height: 2px;
+    position: relative;
+    top: -12px;
+    right: 15px;
+    transition: 0.5s ease-in-out;
+}
+
+.destinos .titulo span:first-child::after {
+    background-color: var(--cor-primaria);
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    top: 7px;
+    right: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.destinos .titulo span:last-child {
+    background-color: var(--cor-primaria);
+    display: block;
+    width: 35px;
+    height: 2px;
+    position: relative;
+    top: -12px;
+    right: -15px;
+    transition: 0.5s ease-in-out;
+}
+
+.destinos .titulo span:last-child::after {
+    background-color: var(--cor-primaria);
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    top: 7px;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.destinos > h3 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    color: #2c3e50;
+}
+
+.destinos .imagenes {
+    display: grid;
+    grid-template-areas: "img1 img1 img4" "img2 img3 img4";
+    grid-template-columns: 1fr 1fr 380px;
+    grid-template-rows: 200px 200px;
+    grid-gap: 15px;
+    padding: 40px 100px;
+}
+
+.destinos .imagenes .overflow1 {
+    grid-area: img1;
+}
+
+.destinos .imagenes .overflow2{
+    grid-area: img2;
+}
+
+.destinos .imagenes .overflow3 {
+    grid-area: img3;
+}
+
+.destinos .imagenes .overflow4{
+    grid-area: img4;    
+}
+
+.destinos .imagenes .overflow1 .img1 {
+    background: url(../images/destination-1.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.destinos .imagenes .overflow2 .img2 {
+    background: url(../images/destination-2.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.destinos .imagenes .overflow3 .img3 {
+    background: url(../images/destination-3.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.destinos .imagenes .overflow4 .img4 {
+    background: url(../images/destination-4.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.destinos .imagenes .overflow1,
+.destinos .imagenes .overflow2,
+.destinos .imagenes .overflow3,
+.destinos .imagenes .overflow4 {
+    overflow: hidden;
+}
+
+.destinos .imagenes .img1 .texto,
+.destinos .imagenes .img2 .texto,
+.destinos .imagenes .img3 .texto,
+.destinos .imagenes .img4 .texto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.destinos .imagenes .img1 .texto p:first-child,
+.destinos .imagenes .img2 .texto p:first-child,
+.destinos .imagenes .img3 .texto p:first-child,
+.destinos .imagenes .img4 .texto p:first-child{
+    align-self: flex-start;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 4px 8px;
+    background-color: #fff;
+    color: red;
+}
+
+.destinos .imagenes .img1 .texto p:last-child,
+.destinos .imagenes .img2 .texto p:last-child,
+.destinos .imagenes .img3 .texto p:last-child,
+.destinos .imagenes .img4 .texto p:last-child{
+    align-self: flex-end;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 4px 8px;
+    background-color: #fff;
+    color: var(--cor-primaria);
+}
+
+.destinos .imagenes .img1:hover,
+.destinos .imagenes .img2:hover,
+.destinos .imagenes .img3:hover,
+.destinos .imagenes .img4:hover {
+    transform: scale(1.07);
+}
+
+@media (min-width: 1400px) {
+    .destinos .imagenes {
+        grid-template-columns: 1fr 1fr 500px;
+        grid-template-rows: 300px 300px;
+        grid-gap: 30px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .destinos .imagenes {
+        grid-template-columns: 1fr 1fr 700px;
+        grid-template-rows: 400px 400px;
+        grid-gap: 40px;
+    }
+}
+
+@media (max-width: 950px) {
+    .destinos .imagenes {
+        grid-template-columns: 1fr 1fr 320px;
+        grid-template-rows: 200px 200px;
+        padding: 40px 60px;
+    }
+
+    .destinos .imagenes .img1 .texto p:first-child,
+    .destinos .imagenes .img2 .texto p:first-child,
+    .destinos .imagenes .img3 .texto p:first-child,
+    .destinos .imagenes .img4 .texto p:first-child{
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+
+    .destinos .imagenes .img1 .texto p:last-child,
+    .destinos .imagenes .img2 .texto p:last-child,
+    .destinos .imagenes .img3 .texto p:last-child,
+    .destinos .imagenes .img4 .texto p:last-child{
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 850px) {
+    .destinos .imagenes {
+        grid-template-columns: 1fr 1fr 250px;
+        grid-template-rows: 130px 130px;
+        padding: 40px 60px;
+    }
+
+    .destinos .imagenes .img1 .texto p:first-child,
+    .destinos .imagenes .img2 .texto p:first-child,
+    .destinos .imagenes .img3 .texto p:first-child,
+    .destinos .imagenes .img4 .texto p:first-child{
+        font-size: 12px;
+        padding: 3px 6px;
+    }
+
+    .destinos .imagenes .img1 .texto p:last-child,
+    .destinos .imagenes .img2 .texto p:last-child,
+    .destinos .imagenes .img3 .texto p:last-child,
+    .destinos .imagenes .img4 .texto p:last-child{
+        font-size: 12px;
+        padding: 3px 6px;
+    }
+
+    .destinos .imagenes .img1 .texto,
+    .destinos .imagenes .img2 .texto,
+    .destinos .imagenes .img3 .texto,
+    .destinos .imagenes .img4 .texto {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 700px) {
+    .destinos .imagenes {
+        display: grid;
+        grid-template-areas: "img1 img2" "img3 img4";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 300px 300px;
+        grid-gap: 15px;
+        padding: 40px 60px;
+    }
+}
+
+@media (max-width: 550px) {
+    .destinos .imagenes {
+        display: grid;
+        grid-template-areas: "img1" "img2" "img3" "img4";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 250px);
+        grid-gap: 15px;
+        padding: 40px 20px;
+    }
+
+    .destinos .imagenes .img1 .texto,
+    .destinos .imagenes .img2 .texto,
+    .destinos .imagenes .img3 .texto,
+    .destinos .imagenes .img4 .texto {
+        padding: 15px;
+    }
+}
